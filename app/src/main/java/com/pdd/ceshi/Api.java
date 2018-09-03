@@ -2,11 +2,14 @@ package com.pdd.ceshi;
 
 import android.support.annotation.NonNull;
 
+import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.Multipart;
 import retrofit2.http.POST;
+import retrofit2.http.Part;
 import retrofit2.http.Query;
 
 public interface Api {
@@ -81,4 +84,22 @@ public interface Api {
                                   @NonNull@Field("userAddressId") int usAddressId,
 
                                   @Field("quantity")int quantity);
+
+
+    @POST("checkCode")
+    @FormUrlEncoded
+    Call<ResponseBody>yzm( @Field("params") String param);
+
+
+   /**
+           * 上传一张图片
+         * @param description
+         * @param imgs
+         * @return
+                 */
+    @Multipart
+    @POST("/upload")
+    Call<String> uploadImage(@Part("fileName") String description,
+                             @Part("file\"; filename=\"image.png\"") RequestBody imgs);
+
 }

@@ -13,7 +13,9 @@ public class NetClient {
 
    // public static final String BASE_URL="http://192.168.1.117:8080/oxygen-userMgr-webServer/userMgr/";
 
-   public static final String BASE_URL = "http://admin.syfeicuiedu.com";
+//   public static final String BASE_URL = "http://admin.syfeicuiedu.com";
+private String url="http://192.168.1.117:8080/oxygen-community-webServer/community/";
+
     private static NetClient sClient;
 
     private final OkHttpClient client;
@@ -30,7 +32,7 @@ public class NetClient {
         gson = new GsonBuilder().setLenient().create(); // 非严格模式
 
         retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
+                .baseUrl(url)
                 .client(client)
                 // 添加Converter (Gson转换器), 注意依赖
                 .addConverterFactory(GsonConverterFactory.create(gson))

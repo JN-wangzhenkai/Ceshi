@@ -87,7 +87,7 @@ public class Imageput extends AppCompatActivity {
         MultipartBody.Part part = MultipartBody.Part.createFormData("image", "photo.png", requestBody);
 
         if (uploadCall != null) uploadCall.cancel();
-        uploadCall = NetClient.getInstance().getUserApi().upload(part);
+//        uploadCall = NetClient.getInstance().getUserApi().upload(part);
         uploadCall.enqueue(uploadCallback);
     }
 
