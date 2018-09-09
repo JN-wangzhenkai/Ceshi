@@ -41,7 +41,9 @@
         <!-- <activity android:name=".permissionActivity"></activity> -->
         <!-- <activity android:name=".CeshiYzm"></activity> -->
         <!-- <activity android:name=".MyCenter"></activity> -->
-        <!--<activity android:name=".downloadmanager.Upload"></activity>-->
+        <!-- <activity android:name=".downloadmanager.Upload"></activity> -->
+        <!-- <activity android:name=".WeChatImage.WechatActivity"></activity> -->
+        <!--<activity android:name=".ProductDetailActivity"></activity>-->
     </application>
 
 </manifest>

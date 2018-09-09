@@ -48,11 +48,13 @@ public class Upload extends AppCompatActivity implements View.OnClickListener {
 
 
     private String url = "http://192.168.1.117:8080/oxygen-community-webServer/community/";
+    private File file;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload);
+        file = new File("/storage/emulated/0/DCIM/100ANDRO/ic_launcher.png");
 
         findViewById(R.id.split).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,14 +62,16 @@ public class Upload extends AppCompatActivity implements View.OnClickListener {
 //                String s="dsafas|sdafa||123|435";
 //                Log.d("111111111", "onClick: "+ Arrays.asList(s.split("\\|"+"#"+"\\|")));
 
-                String ss=String.valueOf(StringTofloat("CA8ADB41"));
-                Log.d("1111111", "onClick: "+ss);
+//                String ss=String.valueOf(StringTofloat("CA8ADB41"));
+//                Log.d("1111111", "onClick: "+ss);
 
+
+
+                uploadPhoto(file);
             }
         });
 
 
-        final File file = new File("/storage/emulated/0/DCIM/100ANDRO/ic_launcher.png");
 
         // 请求体
         final RequestBody requestBody = RequestBody.create(MediaType.parse("image/png"), file);
