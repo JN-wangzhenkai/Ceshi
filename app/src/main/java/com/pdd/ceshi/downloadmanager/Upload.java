@@ -270,7 +270,7 @@ public class Upload extends AppCompatActivity implements View.OnClickListener {
         try {
             mBytes = mString.getBytes("UTF8");
         } catch (Exception e) {
-            Log.d("00000000", "MainActivity----catch");
+            Log.d("00000000", "MainActivityReal----catch");
         }
         String enString = mAes.encrypt(mBytes);
         Log.d("0000000000", "onClick: "+"加密后：" + enString);

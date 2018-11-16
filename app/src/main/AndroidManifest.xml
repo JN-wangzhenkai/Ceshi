@@ -13,13 +13,14 @@
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".dbmanager.RecordActivity">
+        <activity android:name=".realm.MainActivityReal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -65,7 +66,19 @@
         <!-- <activity android:name=".wave.WaveActivity"></activity> -->
         <!-- <activity android:name=".MesurreActivity"></activity> -->
         <!-- <activity android:name=".view.CountDownActivity"></activity> -->
-        <!--<activity android:name=".dbmanager.RecordActivity"></activity>-->
+        <!-- <activity android:name=".dbmanager.RecordActivity"></activity> -->
+        <activity android:name=".realm.RealmActivity" />
+        <!--<activity android:name=".realm.MainActivityReal" />-->
+        <activity android:name=".realm.DogListActivity" />
+        <activity android:name=".realm.QueryActivity" />
+        <activity android:name=".realm.AllDogActivity" />
+        <activity android:name=".realm.UpdateActivity" />
+        <activity android:name=".realm.ConditionQueryActivity" />
+        <activity android:name=".realm.OtherQueryActivity" />
+        <activity android:name=".realm.AsyncActivity" />
+        <activity android:name=".realm.AddDeleteActivity" />
+        <activity android:name=".realm.AsyncQueryActivity" />
+        <activity android:name=".realm.UpdateCatActivity"></activity>
     </application>
 
 </manifest>
