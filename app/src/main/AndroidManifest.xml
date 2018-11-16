@@ -5,6 +5,13 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <!-- 管理蓝牙设备的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 使用蓝牙设备的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,7 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".downloadmanager.Upload">
+        <activity android:name=".dbmanager.RecordActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -42,8 +49,23 @@
         <!-- <activity android:name=".CeshiYzm"></activity> -->
         <!-- <activity android:name=".MyCenter"></activity> -->
         <!-- <activity android:name=".downloadmanager.Upload"></activity> -->
-        <!-- <activity android:name=".WeChatImage.WechatActivity"></activity> -->
-        <!--<activity android:name=".ProductDetailActivity"></activity>-->
+
+
+        <!-- <activity android:name=".MyOwnDialogActivity"/> -->
+        <!-- <activity android:name=".bledemo.BleActivity"></activity> -->
+        <!-- <activity android:name=".ScanActivity"></activity> -->
+        <!-- <activity android:name=".UrlDopostActivity"></activity> -->
+        <!-- <activity android:name=".upuserInfomationActivity" /> -->
+        <!-- <activity android:name=".seekbardemo.SeekActivity"></activity> -->
+        <!-- <activity android:name=".battery.BatteryActivity"></activity> -->
+        <!-- <activity android:name=".waveviewpager.waveActivity"></activity> -->
+        <!-- <activity android:name=".paomadengview.MaActivity"></activity> -->
+        <!-- <activity android:name=".paomadengview.HoriActivity"></activity> -->
+        <activity android:name=".gameDemo.GameActivity" />
+        <!-- <activity android:name=".wave.WaveActivity"></activity> -->
+        <!-- <activity android:name=".MesurreActivity"></activity> -->
+        <!-- <activity android:name=".view.CountDownActivity"></activity> -->
+        <!--<activity android:name=".dbmanager.RecordActivity"></activity>-->
     </application>
 
 </manifest>

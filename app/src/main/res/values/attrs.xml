@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomProgress">
+
+    </declare-styleable>
+
+    <declare-styleable name="CustomProgress_backgroud_color">
+
+    </declare-styleable>
+
+    <declare-styleable name="CustomProgress_current_color">
+
+    </declare-styleable>
+
+    <declare-styleable name="CustomProgress_progress_color">
+
+    </declare-styleable>
+
+    <declare-styleable name="Battery">
+        <attr name="batteryOrientation">
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+        <attr name="batteryColor" format="color"/>
+        <attr name="batteryPower" format="integer"/>
+    </declare-styleable>
+
+
+
+    <declare-styleable name="Wave_View">
+        <attr name="wave_num" format="integer"/>
+        <attr name="wave_len" format="dimension"/>
+        <attr name="wave_color" format="color"/>
+        <attr name="duration_time" format="integer"/>
+    </declare-styleable>
+
+</resources>

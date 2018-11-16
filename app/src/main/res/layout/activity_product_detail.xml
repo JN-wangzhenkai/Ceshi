@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductDetailActivity"
+    >
+
+    <com.pdd.ceshi.DragSwitchLayout
+        android:id="@+id/svc_good_detail_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="36dp"
+        >
+
+        <!-- 必须屏蔽 overScroll，避免部分机型定制的 ScrollView （如魅族）造成的滚动效果 bug -->
+        <com.pdd.ceshi.CustomScrollView
+            android:id="@+id/sv_good_detail_text_detail_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- 商品信息模块 -->
+                <include
+                    android:id="@+id/fragment_good_detail_good_info"
+                    layout="@layout/product_detail_top_fragmet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </com.pdd.ceshi.CustomScrollView>
+
+        <FrameLayout
+            android:id="@+id/sv_good_detail_img_detail_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+    </com.pdd.ceshi.DragSwitchLayout>
+
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/activity_product_detail_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+</RelativeLayout>

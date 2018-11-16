@@ -2,11 +2,13 @@ package com.pdd.ceshi;
 
 import android.support.annotation.NonNull;
 
+import io.reactivex.Observable;
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
@@ -102,4 +104,15 @@ public interface Api {
     Call<String> uploadImage(@Part("fileName") String description,
                              @Part("file\"; filename=\"image.png\"") RequestBody imgs);
 
+    @GET("version.action")
+   Call<ResponseBody> checkVersion();
+
+    //通过post表单形式提交json数据，不太好//pddsj/SJServlet
+    @FormUrlEncoded
+    @POST("getinfo")
+    Call<ResponseBody>upToServeByPost2( @Field("json") String json);
+
+    @FormUrlEncoded
+    @POST("getParentPhysical")
+    Call<ResponseBody>getData(@Field("sn")String sn);
 }
