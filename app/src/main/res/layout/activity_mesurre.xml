@@ -24,14 +24,22 @@
         android:layout_alignParentTop="true"
         android:background="@mipmap/game_1">
 
-        <ImageView
-            android:id="@+id/img"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="50dp"
-            android:layout_marginLeft="80dp"
-            android:src="@mipmap/game_logo" />
+        <!--<ImageView-->
+            <!--android:id="@+id/img"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="60dp"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_marginBottom="50dp"-->
+            <!--android:layout_marginLeft="80dp"-->
+            <!--android:src="@mipmap/game_logo" />-->
     </RelativeLayout>
 
+
+    <Button
+        android:id="@+id/score"
+        android:text="score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

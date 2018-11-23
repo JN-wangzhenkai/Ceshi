@@ -57,7 +57,7 @@ public class upuserInfomationActivity extends AppCompatActivity {
 
 
         String url1 = "http://www.pddzn.com:8888/";
-        String url2 = "http://192.168.1.117:8080/test/";
+        String url2 = "http://192.168.1.117:8080/userLog/test/";
 
         client = new OkHttpClient.Builder()
                 .retryOnConnectionFailure(true)
@@ -88,7 +88,7 @@ public class upuserInfomationActivity extends AppCompatActivity {
         jsonObject.addProperty("mos", "56");
         jsonObject.addProperty("temp", "25");
         jsonObject.addProperty("tim", time);
-        jsonObject.addProperty("mac","81971ff37b98");
+        jsonObject.addProperty("mac", "81971ff37b98");
 
         jsonArray.add(jsonObject);
 
@@ -101,18 +101,24 @@ public class upuserInfomationActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //updelay();
 
-                Log.d("0000000", "onClick: "+jsonObject);
+                Log.d("0000000", "onClick: " + jsonObject);
+
                 Timer timer = new Timer();
                 timer.scheduleAtFixedRate(new TimerTask() {
                     @Override
                     public void run() {
-                        Log.e("TAG","没隔10秒执行一次操作");
+                        Log.e("TAG", "没隔10秒执行一次操作");
 
-
+                        up1();
 
                     }
-                },1000,1000);            }
+                }, 1000, 1000);
+            }
         });
+    }
+
+    private void upLoad() {
+
     }
 
     private void updelay() {
@@ -151,16 +157,16 @@ public class upuserInfomationActivity extends AppCompatActivity {
 
     private void up1() {
 
-        Call<ResponseBody> call=userApi.upToServeByPost2( jsonObject.toString());
+        Call<ResponseBody> call = userApi.upToServeByPost2(jsonObject.toString());
 
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
 
 
-                if(null!=response.body()){
+                if (null != response.body()) {
                     try {
-                        Log.d("000000000", "onResponse: "+response.body().string());
+                        Log.d("000000000", "onResponse: " + response.body().string());
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -170,7 +176,7 @@ public class upuserInfomationActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Log.d("000000000", "fail: "+t.toString());
+                Log.d("000000000", "fail: " + t.toString());
 
             }
         });

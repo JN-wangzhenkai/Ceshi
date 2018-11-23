@@ -109,7 +109,7 @@ public interface Api {
 
     //通过post表单形式提交json数据，不太好//pddsj/SJServlet
     @FormUrlEncoded
-    @POST("getinfo")
+    @POST("insertInfo")
     Call<ResponseBody>upToServeByPost2( @Field("json") String json);
 
     @FormUrlEncoded
